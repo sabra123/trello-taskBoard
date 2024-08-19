@@ -1,0 +1,237 @@
+.boards-page-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    
+  }
+  
+  .home-left-sidebar {
+    position: sticky;
+    top: 0px;
+    
+  }
+  
+  /* .home-left-sidebar-container {
+    margin: 40px 0 0;
+    padding: 0 16px;
+    width: 272px;
+  } */
+   /* Sidebar styles */
+.home-left-sidebar-container {
+    width: 250px; /* Default width for larger screens */
+    padding: 15px;
+    position: relative; /* Ensures it stays in place */
+  }
+  
+  .boards-side-menu-option {
+    display: flex;
+    padding: 8px 10px;
+    /* width: 100%; */
+    color: #0b0119;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+  }
+  
+  .boards-side-menu-option-selected {
+    display: flex;
+    padding: 6px 8px;
+    width: 100%;
+    background-color: #e4f0f6;
+    color: #676ebe;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .boards-section-container {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 16px 0;
+    width: 100%;
+    max-width: 825px;
+    min-width: 288px;
+    
+  }
+  
+  .my-boards-section-header {
+    display: flex;
+  }
+  
+  .my-boards {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .boards-page-header-name {
+    display: inline-block;
+    line-height: 24px;
+    margin: 4px 0 11px 8px;
+    font-size: 24px;
+    font-weight: 700;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .board-tile-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .board-tile {
+    width:23%;
+    margin: 0 2% 2% 0;
+    background: #41699a;
+    color: #fff;
+    line-height: 20px;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 6px;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(104, 79, 123, 0.2);
+    
+    
+
+  }
+  
+  .board-tile:hover {
+    background: #5d243a;
+  }
+  
+  .board-tile-details-name {
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    overflow: hidden;
+    max-height: 40px;
+    width: 100%;
+    word-wrap: break-word;
+    color: #fff;
+  }
+  
+  .create-board-form {
+    background: rgb(120, 55, 85);
+    /* width: 23%; */width:calc(33.333% - 10px);
+    margin: 0 2% 2% 0;
+    line-height: 20px;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 3px;
+    height: 100px;
+    cursor: pointer;
+
+
+  }
+  
+  .create-board-form .inline-form {
+    flex: 1;
+  }
+  
+    .create-board-form .inline-form-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+  .create-board-form:hover {
+    background-color: rgb(89, 89, 134);
+    
+  }
+  
+  .create-board-form .inline-form-input {
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+    background-color: #fafbfc;
+    border: 2px solid #dfe1e6;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 30px;
+    padding: 7px;
+  }
+  
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px){
+  .home-left-sidebar-container {
+    width: 200px; /* Adjust sidebar width for tablets */
+  }
+
+  .board-tile {
+    width: calc(50% - 10px); /* Two tiles per row on tablets */
+  }
+
+  .create-board-form {
+    width: calc(50% - 10px); /* Adjust width for tablets */
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .boards-page-container {
+    flex-direction: column; /* Stack sidebar and main content vertically */
+  }
+
+  .home-left-sidebar-container {
+    width: 10%; /* Full width for sidebar on mobile */
+    box-shadow: none; /* Remove shadow for mobile */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .boards-section-container {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .board-tile {
+    width: calc(100% - 10px); /* Full width for board tiles on mobile */
+  }
+
+  .create-board-form {
+    width: calc(100% - 10px); /* Full width for create board form on mobile */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .home-left-sidebar-container {
+    padding: 5px;
+    width:50px;
+    display: flex; /* Less padding for very small screens */
+  }
+
+  .boards-section-container {
+    padding: 5px; /* Less padding */
+  }
+
+  .board-tile,
+  .create-board-form {
+    width: 50%;
+     
+    margin: 5px 0; /* Adjust margin */
+
+    margin-left: calc(100% -10px);
+  }
+
+  .my-boards-section-header {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .board-tile-details-name {
+    font-size: 16px; /* Smaller font size */
+  }
+}
+  
+  

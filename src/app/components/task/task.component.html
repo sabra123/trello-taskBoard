@@ -1,0 +1,52 @@
+<div class="task-modal-container" *ngIf="task">
+    <div class="task-modal-header">
+      <inline-form
+        class="task-modal-edit-title-form"
+        [defaultText]="task.title"
+        [title]="task.title"
+        (handleSubmit)="updateTaskName($event)"
+      ></inline-form>
+      <img
+        src="/assets/close_icon.svg"
+        class="task-modal-close"
+        (click)="goToBoard()"
+      />
+    </div>
+    <div class="task-modal-body">
+      <div>
+        <form [formGroup]="columnForm" class="column-select-container">
+            <label for="column-name" style="display:block; font-size: 15px;">Choose a Column Name</label>
+          <select formControlName="columnId" class="column-select" >
+            <option *ngFor="let column of getColumn()" [ngValue]="column.id">
+              {{ column.title }}
+            </option>
+          </select>
+        </form>
+        <div class="task-modal-description">
+          <div class="task-modal-description-label">Description</div>
+          <inline-form
+            class="task-modal-edit-description-form"
+            [defaultText]="
+              task.description || 'Add a more detailed description'
+            "
+            [title]="task.description || ''"
+            inputType="textarea"
+            [hasButton]="true"
+            buttonText="Save"
+            (handleSubmit)="updateTaskDescription($event)"
+          ></inline-form>
+        </div>
+      </div>
+      <div class="task-modal-actions">
+        <div class="task-modal-actions-label">Actions</div>
+        <div>
+          <div class="task-modal-actions-action" (click)="deleteTask()">
+            <img src="/assets/trash.svg" class="task-modal-actions-icon" />
+            Delete
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="task-modal-backdrop"></div>
+  

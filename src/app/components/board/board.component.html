@@ -1,0 +1,61 @@
+<app-topbar></app-topbar>
+
+<div class="board" *ngIf="board">
+  <div class="board-header-container">
+    <inline-form
+      class="edit-board-form"
+      [defaultText]="board.title"
+      [title]="board.title"
+      (handleSubmit)="updateBoardTitle($event)"
+    ></inline-form>
+    <div class="delete-board" (click)="deleteBoard()">Delete board</div>
+  </div>
+  <div cdkDropListGroup class="columns">
+    <div class="column" *ngFor="let column of board.columns">
+      <div class="column-title">
+        <inline-form
+          class="edit-column-form"
+          [defaultText]="column.title"
+          [title]="column.title"
+          (handleSubmit)="updateColumnName($event, column.id)"
+        ></inline-form>
+        <img
+          src="/assets/close_icon.svg"
+          class="column-delete-icon"
+          (click)="deleteColumn(column.id)"
+        />
+      </div>
+      <div cdkDropList [cdkDropListData]="column.tasks" (cdkDropListDropped)="drop($event,column.id)">
+        <br>
+        <div
+        cdkDrag
+        (cdkDragStarted)="onDragStarted(column.id)"
+        *ngFor="let task of column.tasks"
+        class="task"
+        (click)="openTask(task.id,column.id)"
+      >
+        {{ task.title }}
+      </div>
+      </div>
+      
+      <inline-form
+        class="create-task-form"
+        defaultText="Add Task"
+        [hasButton]="true"
+        buttonText="Add Task"
+        inputPlaceholder=" "
+        (handleSubmit)="createTask($event, column.id)"
+      ></inline-form>
+    </div>
+    <inline-form
+      class="create-column-form"
+      defaultText="Add a list"
+      [hasButton]="true"
+      buttonText="Add list"
+      inputPlaceholder="Add Column Name"
+      (handleSubmit)="createColumn($event)"
+    ></inline-form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

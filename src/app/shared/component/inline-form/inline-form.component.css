@@ -1,0 +1,41 @@
+.inline-form-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inline-form-text {
+    font-size: 20px;
+    color: #090909;
+    padding: 5px 12px;
+    margin-right: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+
+.inline-form-button{
+    background-color: rgb(14, 14, 15);
+    height:2rem;
+    width:5rem;
+    margin-top: 3px;
+    align-items: center;
+    color:white;
+    border-radius: 4px;
+    border:none;
+    margin-left: 1rem;
+    
+    
+}
+
+  .inline-form {
+    padding: 5px 12px;
+  }
+  .inline-form-input{
+    font-size: 20px;
+    
+  }
+ 
+
+  
