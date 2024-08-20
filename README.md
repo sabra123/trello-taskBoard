@@ -4,17 +4,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 Welcome to the Angular Taskboard project! This is a simple task management application built with Angular that features boards, columns, and tasks. It also includes a shared service to facilitate communication between components.
-Table of Contents
-
-    Project Overview
-    Features
-    Technologies Used
-    Setup Instructions
-    Folder Structure
-    Shared Service
-    Usage
-    Contributing
-    License
 
 ## Project Overview
 
@@ -43,26 +32,18 @@ The Angular Taskboard application allows users to manage tasks in an organized m
 To get started with the Angular Taskboard application, follow these steps:
 
     Clone the Repository
-
-    bash
-
-git clone https://github.com/sabra123/trello-taskBoard.git
+    
+    git clone https://github.com/sabra123/trello-taskBoard.git
 
 ## Navigate to the Project Directory
 
-bash
-
-cd trello-taskBoard
+    cd trello-taskBoard
 
 ## Install Dependencies
 
-bash
-
-npm install
+    npm install
 
 ## Run the Application
-
-bash
 
     ng serve
 
@@ -74,12 +55,13 @@ Here's a brief overview of the folder structure:
 
     src/app/
         boards/ - Contains components and services related to boards.
-        boarf/ - Contains components and services related to columns.
+        board/ - Contains components and services related to columns.
         tasks/ - Contains components and services related to tasks.
-        shared/ - Contains the shared service and utility components.
+        shared/ - Contains the shared service and utility shared components and models.
         app.component.ts - The root component.
         app.module.ts - The main module of the application.
         app-routing.module.ts - Routing configuration.
+
 
 ## Shared Service
 
@@ -97,6 +79,12 @@ Usage
     Board Component use this to add columns,update columns and edit columns.
     Task Component use this for managing task ,updating,deleting and creating task.
     This service is used to save data to local storage and get data from local storage.
+
+## Shared Model and Component
+
+    This contains models and common components that are being used by every other components 
+    Shared Component contains : Customised Inline-Form and TopBar 
+    Shared Model Contains : Model for Board ,Column and Tasks
 
 ## Running unit tests
 
