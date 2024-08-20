@@ -88,7 +88,7 @@
   .board-tile {
     width:23%;
     margin: 0 2% 2% 0;
-    background: #41699a;
+    background: #758fae;
     color: #fff;
     line-height: 20px;
     padding: 8px;
@@ -120,7 +120,7 @@
   }
   
   .create-board-form {
-    background: #6561a2;
+    background: #9999d9;
     /* width: 23%; */width:calc(33.333% - 10px);
     margin: 0 2% 2% 0;
     line-height: 20px;

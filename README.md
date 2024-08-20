@@ -10,8 +10,9 @@ Welcome to the Angular Taskboard project! This is a simple task management appli
 The Angular Taskboard application allows users to manage tasks in an organized manner using boards, columns, and tasks. The primary components of the application are:
 
     Boards: Containers that hold multiple columns.
-    Columns: Sections within a board that contain tasks.
+    Board: Sections within a board that contain tasks.
     Tasks: Individual items within a column.
+    Home: HomePage
 
 ## Features
 
