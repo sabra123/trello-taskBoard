@@ -1,5 +1,5 @@
 .board {
-    background-image: url('/assets/bg.jpg');
+    background-color: white;
     height: 100vh;
     overflow-x: auto;
     width:210vh;
@@ -24,6 +24,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    font-style: italic;
   }
   
   .delete-board:hover {
@@ -39,7 +40,7 @@
   }
   
   .column {
-    background: #9580a8;
+    background: #8a87b3;
     padding: 8px;
     border-radius: 4px;
     width: 272px;
@@ -94,10 +95,18 @@
     font-weight: bold;
     font-style: normal;
     color:rgb(21, 54, 130);
+    border-width: 1rem;
   }
   .create-column-form{
     font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     
   
   }
+  .create-task-form{
+    font-style: italic;
+  }
   
+  .edit-column-form{
+    font-style: italic;
+  }

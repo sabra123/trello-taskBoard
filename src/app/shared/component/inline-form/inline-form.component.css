@@ -4,8 +4,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
+ 
+
+  .inline-form-text:hover{
+    transform: scale(1.01); /* Scale up by 20% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: aliceblue;
+    border-radius: .5rem;
+  }
   .inline-form-text {
     font-size: 20px;
     color: #090909;
@@ -33,7 +42,7 @@
     padding: 5px 12px;
   }
   .inline-form-input{
-    font-size: 20px;
+    font-size: 15px;
     
   }
  

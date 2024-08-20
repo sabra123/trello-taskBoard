@@ -25,6 +25,7 @@
           class="create-board-form"
           defaultText="Create new board"
           (handleSubmit)="createBoard($event)"
+          inputPlaceholder="Enter your Board Name"
         ></inline-form>
         <a
           [routerLink]="['/boards', board.id]"

@@ -8,7 +8,8 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'boards',component:BoardsComponent},
   {path:'boards/:boardId',component:BoardComponent},
-  {path: 'boards/:boardId/column/:columnId/tasks/:taskId',component: TaskComponent}
+  {path: 'boards/:boardId/column/:columnId/tasks/:taskId',component: TaskComponent},
+  {path:'**',redirectTo:''}
 
 ];
 
