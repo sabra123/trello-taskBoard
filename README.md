@@ -1,98 +1,98 @@
-# TrelloTaskBoard
+# Trello Task Board
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+**A Kanban-style task management application built with Angular and TypeScript.**
 
+Organize work into boards, columns, and tasks, and move tasks through your workflow using drag-and-drop interactions. The project uses a shared Angular service for data management and browser local storage for persistence.
 
-Welcome to the Angular Taskboard project! This is a simple task management application built with Angular that features boards, columns, and tasks. It also includes a shared service to facilitate communication between components.
-
-## Project Overview
-
-The Angular Taskboard application allows users to manage tasks in an organized manner using boards, columns, and tasks. The primary components of the application are:
-
-    Boards: Containers that hold multiple columns.
-    Board: Sections within a board that contain tasks.
-    Tasks: Individual items within a column.
-    Home: HomePage
+> **Project status:** Existing Angular 13 project. This repository is being refreshed for a clearer developer experience. A hosted live demo and screenshots have not yet been added.
 
 ## Features
 
-    Create, edit, and delete boards.
-    Add, edit, and remove columns within boards.
-    Create, update, and delete tasks within columns.
-    Drag and drop tasks between columns and boards.
-    Shared service for managing data and communication between components.
+- Create, edit, and delete boards
+- Add, rename, and remove columns within boards
+- Create, update, and delete tasks
+- Drag and drop tasks between columns and boards
+- Share board/task state across components using an Angular service
+- Persist data in browser local storage
+- Reusable inline-form and top-bar components
 
-## Technologies Used
+These features are described in the existing project documentation. Test them locally before presenting them as verified in a live demo.
 
-    Angular (13)
-    TypeScript
-    HTML/CSS
+## Technology
 
-## Setup Instructions
+| Area | Technology |
+| --- | --- |
+| Framework | Angular 13 |
+| Language | TypeScript |
+| UI | Angular Material, Bootstrap, HTML, CSS |
+| Interactions | Angular CDK |
+| Reactive utilities | RxJS |
+| Persistence | Browser local storage |
 
-To get started with the Angular Taskboard application, follow these steps:
+## Getting started
 
-    Clone the Repository
-    
-    git clone https://github.com/sabra123/trello-taskBoard.git
+### Prerequisites
 
-## Navigate to the Project Directory
+- Node.js and npm compatible with Angular 13
+- Angular CLI 13, or use the locally installed CLI via `npx`
 
-    cd trello-taskBoard
+### Run locally
 
-## Install Dependencies
+```bash
+git clone https://github.com/sabra123/trello-taskBoard.git
+cd trello-taskBoard
+npm install
+npm start
+```
 
-    npm install
+Open `http://localhost:4200` in your browser.
 
-## Run the Application
+### Build and test
 
-    ng serve
+```bash
+npm run build
+npm test
+```
 
-    Open your browser and go to http://localhost:4200 to view the application.
+> This documentation update does not verify that installation, tests, or production builds pass on a current machine. Angular 13 is an older release, so check Node.js compatibility if setup fails.
 
-## Folder Structure
+## Project structure
 
-Here's a brief overview of the folder structure:
+```text
+src/app/
+├── components/       # Application UI components
+├── shared/           # Shared models, components and services
+├── app-routing.module.ts
+├── app.module.ts
+└── app.component.ts
+```
 
-    src/app/
-        boards/ - Contains components and services related to boards.
-        board/ - Contains components and services related to columns.
-        tasks/ - Contains components and services related to tasks.
-        shared/ - Contains the shared service and utility shared components and models.
-        app.component.ts - The root component.
-        app.module.ts - The main module of the application.
-        app-routing.module.ts - Routing configuration.
+The original project README describes components for boards, columns, and tasks, with a shared service at `src/app/shared/service/shared.service.ts`.
 
+## Architecture notes
 
-## Shared Service
+The shared service coordinates board, column, and task operations and stores data in local storage. This makes the app usable without a backend but also means data is specific to the current browser and is not synchronized across users or devices.
 
-The shared service is used for managing the data and facilitating communication between different components. This service is responsible for:
+## Screenshots
 
-    Managing the state of boards, columns, and tasks.
-    Providing methods for adding, updating, and deleting boards, columns, and tasks.
-    Emitting events to notify components of data changes.
+Screenshots will be added after the application is run and visually reviewed. Avoid presenting mockups as actual application screenshots.
 
-You can find the shared service in src/app/shared/service/shared.service.ts.
-Usage
+## Planned improvements
 
-    This service is a shared service that is being used by all components .
-    Boards Component use this to create,update and delete the boards.
-    Board Component use this to add columns,update columns and edit columns.
-    Task Component use this for managing task ,updating,deleting and creating task.
-    This service is used to save data to local storage and get data from local storage.
+- Refresh the Kanban board UI and mobile layout
+- Improve accessibility and keyboard interactions
+- Add focused tests for task movement and persistence
+- Review Angular dependencies and plan a safe upgrade
+- Deploy a working public demo
 
-## Shared Model and Component
+## Author
 
-    This contains models and common components that are being used by every other components 
-    Shared Component contains : Customised Inline-Form and TopBar 
-    Shared Model Contains : Model for Board ,Column and Tasks
+**Sabra Bano** — Frontend Engineer | Angular & TypeScript | 4+ years of experience
 
-## Running unit tests
+- [Portfolio](https://sabra-bano.netlify.app/)
+- [LinkedIn](https://www.linkedin.com/in/sabra-bano-40931215a)
+- [GitHub](https://github.com/sabra123)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## License
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-
+No open-source license has been added yet. Add one only if you intend to grant others permission to reuse this code.
